@@ -38,8 +38,12 @@ public class MediaEscolar {
 
     public void calcularMedia(){
 
-
         mediaDoAluno = ( nota1 + nota2 + nota3 + nota4) / 4.0;
+
+        determinarSituacao();
+    }
+
+    public void determinarSituacao(){
 
         if (mediaDoAluno >= 5){
             situacaoAluno ="Aprovado(a)";
