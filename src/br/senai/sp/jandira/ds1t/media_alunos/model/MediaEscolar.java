@@ -47,8 +47,11 @@ public class MediaEscolar {
 
         if (mediaDoAluno >= 5){
             situacaoAluno ="Aprovado(a)";
-        } else {
+        } else if (mediaDoAluno < 3) {
             situacaoAluno = "Reprovado(a)";
+
+        } else {
+            situacaoAluno = "Recuperação";
         }
 
         exibirResultado();
@@ -59,7 +62,7 @@ public class MediaEscolar {
         System.out.println("CÁLCULANDO MÉDIA...");
         System.out.println("----------------------------------------");
         System.out.println("Média Do aluno: " + mediaDoAlunoComDoisDecimais);
-        System.out.println("Resultado: O(a) aluno(a) " + nomeAluno + "está " + situacaoAluno + "!");
+        System.out.println("Resultado: O(a) aluno(a) " + nomeAluno + " está " + situacaoAluno + "!");
         System.out.println("***FINALIZANDO PROGRAMA***");
         System.out.println("-----------------------------------------");
     }
